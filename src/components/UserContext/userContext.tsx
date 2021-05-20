@@ -38,15 +38,15 @@ export class UserContextProvider extends Component<
     ) {
         console.log(prevState.token, '|', this.state.token);
         if (this.state.token !== prevState.token) {
+            console.log("41", this.state.token)
             if (this.state.token) {
                 localStorage.setItem("token", this.state.token);
-                console.log(this.state.token);
+                
                 fetch(`http://localhost:3000/user/`, {
                     headers: new Headers ({
                         Authorization: `Bearer ${this.state.token}`}),
                     })
                     .then((res) => {
-                        console.log(res);
                         if (res.status !== 200) {
                             this.setState({
                                 token: null,
@@ -58,9 +58,8 @@ export class UserContextProvider extends Component<
                         return res.json();
                     })
                     .then((data)=> {
-                        console.log("you've made it this far");
-
                         if (data.user) {
+                            console.log("SUCCESS LOGIN")
                             this.setState({
                                 user: data.user,
                                 isAuth: true,
@@ -79,6 +78,7 @@ export class UserContextProvider extends Component<
         }
 
         setToken = (token: string | null) => {
+            console.log(token)
             this.setState({
                 token: token,
             });

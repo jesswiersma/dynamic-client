@@ -4,7 +4,7 @@
 .navbar{
     height: 100pt;
     width: 100%;
-    background-color: #f5f5f4;
+    background-color: #5964B8;
   }
   
   .navbar.navbar-expand-lg.navbar-light
@@ -13,6 +13,15 @@
     padding-right: 1.5vw;
   }
   
+  .navbar-toggler {
+    background-color: #c9ccf1;
+    border: solid 1px;
+    border-radius: 10% 10% 10% 10%;
+    padding: 5px;
+    margin: 3px;
+  }
+
+
   #logo{
     width: 90pt;
     height: auto;
@@ -21,11 +30,14 @@
   
   .collapse.navbar-collapse{
     float: right;
+    padding: 0px;
+    font-size: 8PT;
+    
   
   }
   
   .nav-item {
-    padding: 0pt;
+    padding: 5pt;
     margin: auto;
     text-align: center;
   }
@@ -81,12 +93,12 @@
     background-color: #fdfdfd;
   } 
 
-  /* .splashBox{
+  .splashBox{
     height: 780px;
     width: 96%;
     margin: auto;
     position: relative;
-  } */
+  }
 
    #splashTitle {
     font-size: 50pt;
@@ -103,10 +115,38 @@
   display: inline;
   margin: 0 auto;
   height: auto;
-  height: 780px;
-  width: 100%;
+  height: 650px;
+  width: 80%;
+  border-radius: 50% 50% 50% 50%;
   position: relative;
   object-fit: cover;
   object-position: 50% 80%;
    } 
 
+/* ADMIN HOME */
+
+#adminSlashTitle {
+  color: black;
+}
+
+
+
+
+
+
+/* FOOTER */
+
+.footer{
+  height: 200px;
+  width: 100%;
+  background-color: #2733A0;
+  margin: 0pt;
+}
+
+.copyright{
+  margin: auto;
+  font-size: 12pt;
+  line-height: 200px;
+  color: #f1f1f1;
+  text-align: center;
+}

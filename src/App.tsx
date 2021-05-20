@@ -5,6 +5,10 @@ import Home from "./components/Home/Home";
 import LoginUser from './components/Auth/loginUser';
 import RegisterUser from './components/Auth/registerUser';
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import AdminHome from './components/AdminHome/AdminHome';
+import UserHome from "./components/UserHome/UserHome";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,12 +22,23 @@ const App: React.FunctionComponent = () => {
     <div className="App">
       <div>
       <UserContextProvider>
-        <Navbar/>
+        <Navbar />
         <Switch>
+          <Route path = "/user">
+            <UserHome/>
+          </Route>
+          <Route path = "/waterloo">
+            <AdminHome/>
+          </Route>
+          <Route path = "/user/register">
+          
+          </Route>
+
           <Route path = "/">
             <Home/>
           </Route>
         </Switch>
+        <Footer/>
       </UserContextProvider>
     </div>
    </div>
